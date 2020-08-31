@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+/*
+==============================================
+Reset CSS
+==============================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	font-family: 'Noto Sans', sans-serif;
+}
+a{
+	cursor: pointer;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	color: black;
+	background: white;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+strong{
+	font-weight: 600;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+.form-control:focus{
+	border-color: rgba(214,214,214,1);
+	webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.woowReset ul,
+.woowReset ol{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.woowReset li{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+/*
+==============================================
+Style Special Loader
+==============================================
+*/
+
+#loader_special{
+	display: none;
+	position: fixed;
+	z-index: 9999999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+#loader_special .cont_loader img {
+	width: 4em;
+	animation-name: especial-oval;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes especial-oval {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.cont_loader .expecial_txt_loader{
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: 300;
+	padding-top: 1em;
+}
+
+#loader_special .cont_loader{
+	display: table;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+#loader_special .cont_loader > div{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+
+/*
+==============================================
+Style General
+==============================================
+*/
+
+
+#alertLoad{
+	position: fixed;
+	bottom: 0.5em;
+	right: 0.37em;
+	background: #27ae60;
+	border: 0.125em solid #27ae60;
+	z-index: 9999999;
+	padding: 0.125em 0.5em;
+	border-radius: 0.187em;
+	border: 0.08em solid #209143;
+	display: none;
+}
+
+#alertLoad span{
+	color: #FFF;
+	font-size: 1.25em;
+	display: inline-block;
+	float: left;
+	margin-top: 0.43em;
+}
+
+#alertLoad img{
+	width: 2.5em;
+	vertical-align: middle;
+}
+
+.alertFail,
+.alertOk{
+	position: fixed;
+	bottom: 1em;
+	width: 64%;
+	left: 50%;
+	margin-left: -16.8em;
+	background: #c0392b;
+	z-index: 999999999;
+	padding: 0.125em 0.5em;
+	border-radius: 0.187em;
+	display: none;
+	padding: 0.5em 0.68em;
+	border: 0.08em solid rgb(119, 0, 0);
+	text-align: center;
+	margin-left: -33%;
+}
+
+
+.alertFail span,
+.alertOk span{
+	color: #FFF;
+	font-size: 1.25em;
+	display: inline-block;
+}
+
+.alertOk{
+	background: #27AE60;
+	border: 0.08em solid #3B694F;
+}
+
+.woowRequireFail{
+	border: 0.08em solid rgba(214, 0, 0, 0.8) !important;
+	box-shadow: 0 0 0.187em #FF0303 !important;
+	-webkit-box-shadow: 0 0 0.187em #FF0303 !important;
+	-moz-box-shadow: 0 0 0.187em #FF0303 !important;
+	-ms-box-shadow: 0 0 0.187em #FF0303 !important;
+	-o-box-shadow: 0 0 0.187em #FF0303 !important;
+}
+
+td.woowRequireFail{
+	border: none;
+	border-right: 0.08em solid rgba(214, 0, 0, 0.8) !important;
+	border-left: 0.08em solid rgba(214, 0, 0, 0.8) !important;
+	box-shadow: none !important;
+}
+
+tr.woowRequireFail{
+	border: 0.125em solid rgba(214, 0, 0, 0.26) !important;
+	box-shadow: none !important;
+}
+
+.printErrors{
+	margin-top: 0.625em !important;
+	padding: 0.625em 1.25em !important;
+	font-weight: 600;
+	color: #e74c3c;
+	text-shadow: 0 0 0 #9A9A9A;
+	display: none;
+}
+
+/******ESTILOS****/
+
+a, a:hover, .logoimg{
+  transition: all .2s ease-in-out;
+}
+
+header{
+  position: relative;
+  z-index: 999;
+}
+
+.menu-fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.menu-fixed .logoimg{
+  max-width: 100px !important;
+}
+
+.top-bar {
+  background-color: #232323;
+  position: relative;
+}
+
+.top-bar .col-sm-6{
+  width: 50%;
+}
+
+.top-bar .social-zoco li, .top-bar .contact-info li{
+  color: #fff !important;
+  border: 0 !important;
+  padding: 5px;
+}
+
+.top-bar .social-zoco li a{
+  color: #b10052 !important;
+  border: 1px solid #b10052;
+  border-radius: 50px;
+  width: 40px;
+  display: block;
+  text-align: center;
+  padding: 6px 0;
+}
+
+.top-bar .contact-info{
+  margin-top: 10px;
+}
+
+.top-bar .contact-info li svg{
+  color: #b10052 !important;
+}
+
+.top-bar .contact-info li:first-child:after{
+  content: " | ";
+}
+
+.top-bar .social-zoco li a:hover{
+  background-color: #b10052;
+  color: #232323 !important;
+}
+
+.social-zoco, .contact-info{
+  list-style: none;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.social-zoco li, .contact-info li{
+  display: inline-block;
+  padding: 10px;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.contact-info li a{
+  color: #fff;
+}
+
+.social-zoco li img{
+  max-width: 36px;
+}
+
+.main-header{
+  background-color: #fff;
+}
+
+.main-header nav ul{
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  margin: 0px;
+}
+
+.main-header nav ul li{
+  display: inline-block;
+  padding: 5px;
+}
+
+.main-header nav ul li a{
+  color: #232323;
+}
+
+.main-header nav ul li a:hover{
+  color: #dd892e;
+  text-decoration: none;
+}
+
+.main-header nav ul li.current-page a{
+  color: #dd892e;
+  border-bottom: 2px solid #dd892e;
+}
+
+.video-content{
+  position: relative;
+}
+
+.video-content video{
+  width: 100%;
+  margin-top: -100px;
+}
+
+.btn-cotizar{
+color: #fff !important;
+background: rgb(219,135,46);
+background: linear-gradient(90deg, rgba(219,135,46,1) 43%, rgba(210,73,1,1) 100%);
+font-size: 16px;
+font-weight: bold;
+border: 0;
+display: inline-block;
+width: 100%;
+max-width: 250px;
+padding: 10px;
+text-align: center;
+border-radius: 20px;
+transition: all .2s ease-in-out;
+margin: 0 auto;
+}
+
+.btn-cotizar:hover{
+  color: #fff;
+  background: rgb(219,135,46);
+background: linear-gradient(90deg, rgba(219,135,46,1) 20%, rgba(210,73,1,1) 100%);
+transition: all .2s ease-in-out;
+
+}
+
+.container{
+  margin: 0 auto !important;
+}
+
+.logocont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logostop {
+  position: static;
+  display: block;
+  width: 210px;
+  padding: 10px 0px;
+  text-align: left;
+}
+
+.logostop .logoimg{
+	width: 130px;
+  max-width: 100%;
+}
+
+.divider-gradient{
+background: rgb(19,114,148);
+background: -moz-linear-gradient(0deg, rgba(19,114,148,0) 0%, rgba(19,114,148,1) 37%, rgba(19,114,148,1) 65%, rgba(19,114,148,0) 100%);
+background: -webkit-linear-gradient(0deg, rgba(19,114,148,0) 0%, rgba(19,114,148,1) 37%, rgba(19,114,148,1) 65%, rgba(19,114,148,0) 100%);
+background: linear-gradient(0deg, rgba(19,114,148,0) 0%, rgba(19,114,148,1) 37%, rgba(19,114,148,1) 65%, rgba(19,114,148,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#137294",endColorstr="#137294",GradientType=1);
+height: 400px;
+z-index: 9;
+position: absolute;
+bottom: -200px;
+width: 100%;
+}
+
+.aliados{
+  background-color: #fff;
+}
+
+.aliados img{
+  width: 100%;
+}
+
+.aliados h3{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.title-zoco{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #af0052;
+  margin: 40px auto 20px;
+  width: auto;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.title-zoco.right{
+  text-align: right;
+  margin-top: -40px;
+  z-index: 9;
+  position: relative;
+}
+
+.title-zoco.no-back{
+  background-color: transparent;
+  color: #af0052;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.tables_services{
+  padding: 0px 20px 80px;
+  background-color: #2b728e;
+  background-image: url('../images/background-index-zoco-digital.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.tables_services .service{
+    max-width: 100%;
+    width: 100% !important;
+    height: 290px;
+  }
+
+  .tables_services .service a{
+    padding: 0;
+  }
+
+  .tables_services h3{
+  font-size: 35px;
+}
+
+.tables_services h3 span{
+  background-color: #db872e;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  display: table;
+  margin-bottom: 20px;
+}
+
+.tables_services .service{
+  background-color: #999;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 10px;
+  display: inline-block;
+  max-width: calc(33% - 20px);
+  color: #fff;
+  transition: all .6s ease-in-out;
+  background-size: 100%;
+  background-position: center;
+  height: 450px;
+
+}
+
+.tables_services .service a{
+  color: #fff;
+  text-decoration: none !important;
+  position: absolute;
+  bottom: 30px;
+  padding-top: 86%;
+}
+
+.tables_services .service h2{
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tables_services .service:hover {
+  background-size: 120%;
+  transition: all .6s ease-in-out;
+}
+
+.tables_services .service .price{
+  font-size: 20px;
+  margin-bottom: -10px;
+}
+
+.tables_services .service .price span{
+  font-weight: bold;
+  display: block;
+}
+
+.tables_services .service.ecommerce{
+  background-image: url(../images/software-background.jpg);
+}
+
+.tables_services .service.inteligencia-artificial{
+  background-image: url(../images/inteligencia-background.jpg);
+}
+
+.tables_services .service.growth-market{
+  background-image: url(../images/growth-background.jpg);
+}
+
+.descripcion-servicio{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 50px;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 9;
+}
+
+.descripcion-servicio img{
+  max-width: 100px;
+}
+
+.team-item{
+  background-color: rgba(33,25,21, .5);
+  padding: 30px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.team-item img{
+  max-width: 130px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.team-item .team-info{
+  width: calc(100% - 160px);
+  display: inline-block;
+  padding: 10px;
+}
+
+.team-item .team-info h2{
+  color: #dd892e;
+  font-size: 30px;
+}
+
+.team-item .team-info h4{
+  color: #fff;
+  font-size: 25px;
+}
+
+.team-item .team-info p{
+  color: #fff;
+  font-size: 16px;
+}
+
+.team-zoco .slick-next:before{
+  content: ">";
+}
+
+.team-zoco .slick-prev:before{
+  content: "<";
+}
+
+.team-zoco .slick-arrow{
+  background-color: rgba(33,25,21, .5);
+  padding: 0px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+
+.banner-bottom{
+  padding: 100px 20px;
+  background-image: url('../images/banner-bottom-zoco-digital.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.content-banner-bottom{
+  text-align: center;
+}
+
+.content-banner-bottom h2{
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content-banner-bottom h2 .back-title{
+  background-color: #dd892e;
+  padding: 0px 5px;
+}
+
+.content-banner-bottom h4{
+  color: #fff;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.btn-danger{
+  background-color: #db872e !important;
+}
+
+.formulario {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.formulario .form-control{
+  background-color: rgba(255,255,255,.4) !important;
+  color: #fff !important;
+  border: inherit;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.remodal .formulario .form-control{
+  background-color: rgba(255,255,255,.4) !important;
+  color: #fff !important;
+  border: 1px solid #d3d3d3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.custom-control-input{
+  opacity: .4;
+}
+
+.formulario .custom-radio label, .formulario .custom-radio label a{
+  color: #fff;
+}
+
+.formulario .form-control::placeholder{
+  color: #fff;
+}
+
+.remodal .formulario .form-control::placeholder{
+  color: #d3d3d3;
+}
+
+.formulariotitulo {
+  color: #db872e;
+  font-size: 1.96em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.formulariop {
+  margin-top: 1em;
+  margin-bottom: 1.6em;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.formularioform {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgb(189, 11, 19);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.remodal{
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.p-60{
+  padding: 60px 0;
+}
+
+.slick-slide img{
+  width: 100%;
+}
+
+.btn-enviar{
+  width: 100px;
+  margin: 0 auto;
+}
+
+footer{
+  background-color: #232323;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+footer ul{
+  padding: 0;
+}
+
+footer ul:first-child{
+  list-style: none;
+  border-bottom: 1px solid #db872e;
+  text-align: left !important;
+  padding-bottom: 10px;
+}
+
+footer ul li{
+  display: inline-block;
+  text-align: left;
+}
+
+footer ul li a{
+  color: #fff;
+  padding: 5px;
+}
+
+footer ul li a:hover{
+  color: #fff;
+}
+
+footer .contact-info svg{
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: top;
+  color: #db872e;
+}
+
+footer .contact-info div{
+  width: calc(100% - 40px);
+  display: inline-block;
+  text-align: left;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+footer .contact-info div p{
+  margin-bottom: 10px;
+}
+
+footer .slogan h3{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+footer .slogan h3 span{
+  color: #db872e;
+}
+
+/***INTERNAS***/
+
+.banner-inside{
+  padding: 150px 20px;
+  background-color: #003e63;
+  text-align: center;
+}
+
+.banner-inside h1{
+  margin-top: 0;
+}
+
+.banner-inside h4{
+  color: #fff;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.banner-inside.quienes-somos{
+  background-image: url('../images/banner-quienes-somos-zoco-digital.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.banner-inside.inteligencia-artificial{
+  background-image: url('../images/banner-inteligencia-artificial-zoco-digital.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.banner-inside.software{
+  background-image: url('../images/background-servicios-zoco-digital-software.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.banner-inside.inteligencia-artificial .title-zoco{
+  background-color: #1a2a43;
+}
+
+.canales_bots{
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.canales_bots h3{
+  font-size: 20px;
+  color: #1a2a43;
+  margin: 20px 0;
+  font-weight: bold; 
+}
+
+.metodologia{
+  padding: 100px 0;
+  background-image: url('../images/background-zoco-digital-internas-28.jpg');
+  background-size: cover;
+}
+
+.metodologia h2{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #1a2a43;
+  margin-bottom: 60px;
+}
+
+.metodologia .content-metodologia{
+  margin: 10px 0;
+}
+
+.metodologia .content-metodologia img{
+  width: 70px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.metodologia .content-metodologia .info-metodologia{
+  width: calc(100% - 80px);
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.metodologia .content-metodologia .info-metodologia h3{
+  font-size: 25px;
+  color: #546b86;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.servicio-inside{
+  padding: 100px 0;
+  background-color: #ecedef !important;
+}
+
+.tabs-services{
+  margin: 20px 0;
+}
+
+.tabs-services .btn-cotizar{
+  margin-top: 10px;
+}
+
+.tabs-services .nav-pills{
+  text-align: left;
+}
+
+.tabs-services .nav-pills a{
+  font-size: 20px;
+  color: #1a2a43;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabs-services .nav-pills .active{
+  background-color: transparent;
+  color: #b10052;
+  font-weight: bold;
+}
+
+.tabs-services .tab-pane{
+  padding: 10px;
+}
+
+.tabs-services .tab-pane img{
+  width: 90px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tabs-services .tab-pane p{
+  width: calc(100% - 95px);
+  display: inline-block;
+  padding: 20px;
+}
+
+.tabs-services .tab-pane h3{
+  font-size: 20px;
+  color: #1a2a43;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.tables_exitos{
+  padding: 80px 0;
+}
+
+.tables_exitos .caso{
+  background-color: #00507f;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px;
+  width: 50%;
+  max-width: calc(50% - 20px);
+  display: inline-block;
+}
+
+.tables_exitos .caso img{
+  max-width: 250px;
+}
+
+.tables_exitos .caso p{
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.tables_exitos .caso.mac_center{
+  background-image: url('../images/background-mac-center.jpg');
+  background-size: cover;
+}
+
+.tables_exitos .caso.alcabama{
+  background-image: url('../images/background-alcabama.jpg');
+  background-size: cover;
+}
+
+.tables_services.inside .service{
+  max-width: calc(50% - 20px) !important;
+  height: 200px;
+}
+
+.tables_services.inside .service a{
+  padding-top: 0;
+}
+.form-contacto{
+  padding: 100px 0;
+  background-color: #1a2a43;
+  background-image: url('../images/background-contacto.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-contacto .col-md-6:first-child{
+  padding: 40px;
+}
+
+.back-orange{
+  background-color: #d4642b;
+  padding: 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.content-contacto{
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #d4642b;
+  background-image: url('../images/back-contacto-zoco-digital.jpg');
+  background-size: cover;
+  background-position: left center;
+}
+
+.content-trabajo{
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #d4642b;
+  background-image: url('../images/back-trabajo-zoco-digital.jpg');
+  background-size: cover;
+  background-position: left center;
+}
+
+.form-contacto .formulario .form-control{
+  background-color: #ecedef !important;
+}
+
+.form-contacto .formulario .custom-radio label, .form-contacto .formulario .custom-radio label a{
+  color: #232323;
+}
+
+.form-contacto .formulario .form-control::placeholder{
+  color: #232323;
+}
+
+.form-contacto h2 span{
+  background-color: #1a2a43;
+  padding: 0px 5px;
+  display: block;
+}
+
+.content-contacto h3{
+  color: #fff;
+  font-size: 25px;
+}
+
+.right-bar-contacto{
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px){
+
+  .video-content video{
+    margin-top: 0px;
+  }
+
+  .descripcion-servicio{
+    text-align: center;
+  }
+
+  footer h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .top img.banner_zoco{
+    position: relative !important;
+    margin-bottom: -6px;
+  }
+  .content-banner, .content-banner-bottom{
+    padding-bottom: 0;
+  }
+  .hidden-mobile{
+    display: none !important;
+  }
+
+  #menu-zoco{
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  #menu-zoco{
+    background-color: #fff;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    display: none;
+  }
+
+  .main-header nav ul li{
+    display: block !important;
+  }
+
+  #menu-toggle{
+    color: #dd892e !important;
+    display: inline-block;
+  }
+
+  .title-zoco, .content-banner-bottom h2, .metodologia h2, .content-banner-bottom h2{
+    font-size: 35px;
+  }
+  .title-zoco{
+    font-size: 35px;
+  }
+
+  .content-banner-bottom h4{
+    font-size: 22px;
+  }
+  .team-item{
+    text-align: center;
+  }
+
+  .team-item img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team-item .team-info{
+    width: 100%;
+    display: block;
+    padding: 10px;
+  }
+
+  .team-item .team-info h2{
+    font-size: 25px;
+  }
+
+  .team-item .team-info h4{
+    font-size: 20px;
+  }
+
+  .team-item .team-info p{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  footer{
+    text-align: left;
+  }
+
+  .logoimg{
+    max-width: 100px !important;
+  }
+
+
+  .tables_exitos .caso{
+    background-color: #00507f;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: calc(100% - 20px);
+    display: inline-block;
+  }
+
+  .metodologia .content-metodologia img, .metodologia .content-metodologia .info-metodologia{
+    width: 100%;
+  }
+
+  .metodologia .content-metodologia img{
+    max-width: 80px;
+    margin: 10px auto;
+    display: block;
+  }
+  .tabs-services .nav-pills{
+    display: inline-block !important;
+  }
+
+  .tabs-services .nav-pills a{
+    font-size: 16px;
+    display: inline-block;
+  }
+
+}
+
+@media screen and (max-width: 590px){
+  .slick-arrow{
+    display: none !important;
+  }
+
+  .container{
+    padding: 20px;
+  }
+
+  footer h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .tabs-services .tab-pane img{
+    width: 100px;
+    display: block;
+    margin: 10px auto
+  }
+
+  .tabs-services .tab-pane p{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 420px){
+  footer {
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
+
+/****input file***/
+
+label.file-upload{position:relative;overflow:hidden}label.file-upload input[type=file]{position:absolute;top:0;right:0;min-width:100%;min-height:100%;font-size:100px;text-align:right;filter:alpha(opacity=0);opacity:0;outline:0;background:#fff;cursor:inherit;display:block}
