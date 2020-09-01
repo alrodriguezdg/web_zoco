@@ -462,6 +462,17 @@ width: 100%;
   position: relative;
 }
 
+.tables_services.growth-market{
+  padding: 80px 20px;
+  background-color: #ffffff;
+  background-image: inherit;
+}
+
+.tables_services.growth-market .service{
+    height: 280px;
+    padding: 20px;
+  }
+
 .tables_services .service{
     max-width: 100%;
     width: 100% !important;
@@ -540,6 +551,18 @@ width: 100%;
 
 .tables_services .service.growth-market{
   background-image: url(../images/growth-background.jpg);
+}
+
+.tables_services .service.traccion{
+  background-image: url(../images/background-growth-servicios-zoco-10.jpg);
+}
+
+.tables_services .service.producto{
+  background-image: url(../images/background-growth-servicios-zoco-11.jpg);
+}
+
+.tables_services .service.optimizar{
+  background-image: url(../images/background-growth-servicios-zoco-12.jpg);
 }
 
 .descripcion-servicio{
@@ -837,6 +860,13 @@ footer .slogan h3 span{
   background-position: center;
 }
 
+.banner-inside.growth-market{
+  background-image: url('../images/background-servicios-zoco-digital-growth.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .banner-inside.inteligencia-artificial .title-zoco{
   background-color: #1a2a43;
 }
@@ -1070,6 +1100,10 @@ footer .slogan h3 span{
   }
   .hidden-mobile{
     display: none !important;
+  }
+
+  .tables_services .service, .tables_services.inside .service{
+    max-width: 100% !important;
   }
 
   #menu-zoco{
